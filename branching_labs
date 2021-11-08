@@ -1,0 +1,149 @@
+//lab to find smallest number in several inputs
+
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int num1;
+      int num2;
+      int num3;
+      
+      num1 = scnr.nextInt();
+      num2 = scnr.nextInt();
+      num3 = scnr.nextInt();
+      
+      if ((num1 < num2) && (num1 < num3)) {
+         System.out.println(num1);
+      }
+      else if ((num2 < num1) && (num2 < num3)) {
+         System.out.println(num2);
+      }
+      
+      else if ((num3 < num2) && (num1 > num3)) {
+         System.out.println(num3);
+      }
+      
+      else {
+         System.out.println(num1);
+      }
+   }
+}
+
+
+//lab to label interstate highways
+
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in); 
+      int highwayNumber;
+      int primaryNumber;
+
+      highwayNumber = scnr.nextInt();
+      
+      if ((highwayNumber >= 1) && (highwayNumber <= 99)) {
+         if (highwayNumber % 2 == 0) {
+            System.out.println("I-" + highwayNumber + " is primary, going east/west.");
+         }
+         else {
+            System.out.println("I-" + highwayNumber + " is primary, going north/south.");
+         }
+      }
+      
+      else if (highwayNumber % 100 == 0) {
+         System.out.println(highwayNumber + " is not a valid interstate highway number.");
+      }
+      
+      else if (highwayNumber >= 100) {
+         if (highwayNumber % 2 == 0) {
+            System.out.println("I-" + highwayNumber + " is auxiliary, serving I-" + (highwayNumber % 100) + ", going east/west.");  
+         } else {
+            System.out.println("I-" + highwayNumber + " is auxiliary, serving I-" + (highwayNumber % 100) + ", going north/south.");  
+         }
+         
+         
+      }
+      
+      else {
+         System.out.println(highwayNumber + " is not a valid interstate highway number.");  
+      }
+   }
+}
+
+
+//lab to calculate change given
+
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      
+      int myChange;
+      int changeLeft;
+      myChange = scnr.nextInt();
+      changeLeft = myChange;
+      int dollars;
+      int quarters;
+      int dimes;
+      int nickels; 
+      int pennies;
+      
+      if (changeLeft >= 100) {
+         dollars = changeLeft / 100;
+         changeLeft = changeLeft % 100;
+         if (dollars == 1) {
+            System.out.println(dollars + " Dollar");
+         } else {
+            System.out.println(dollars + " Dollars");
+         }
+      }
+      
+      if (changeLeft >= 25) {
+         quarters = changeLeft / 25;
+         changeLeft = changeLeft % 25;
+         if (quarters == 1) {
+            System.out.println(quarters + " Quarter");
+         } else {
+            System.out.println(quarters + " Quarters");
+         }
+      }
+      
+      if (changeLeft >= 10) {
+         dimes = changeLeft / 10;
+         changeLeft = changeLeft % 10;
+         if (dimes == 1) {
+            System.out.println(dimes + " Dime");
+         } else {
+            System.out.println(dimes + " Dimes");
+         }
+      }
+      
+      if (changeLeft >= 5) {
+         nickels = changeLeft / 5;
+         changeLeft = changeLeft % 5;
+         if (nickels == 1) {
+            System.out.println(nickels + " Nickel");
+         } else {
+            System.out.println(nickels + " Nickels");
+         }
+      }
+      
+      if (changeLeft >= 1) {
+         pennies = changeLeft / 1;
+         changeLeft = changeLeft % 1;
+         if (pennies == 1) {
+            System.out.println(pennies + " Penny");
+         } else {
+            System.out.println(pennies + " Pennies");
+         }
+      }
+      
+      else if (myChange == 0) {
+         System.out.println("No change");
+      }
+   }
+}
+
