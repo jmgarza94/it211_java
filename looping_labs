@@ -1,0 +1,80 @@
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      
+      Scanner scnr = new Scanner(System.in);
+      int myInt;
+      myInt = scnr.nextInt();
+      String binaryString = Integer.toBinaryString(myInt);
+      //System.err.println(binaryString);
+      //System.err.println(binaryString.length());
+      //System.err.println(binaryString.length() - 1);
+      for (int i = (binaryString.length() - 1); i >= 0; --i ) {
+         //System.err.println(i);
+         System.out.print(binaryString.charAt(i));
+      }
+      System.out.println();
+      
+      //System.out.println(binaryString);
+      //System.out.println(binaryString.charAt(0));
+      
+      
+      
+   }
+}
+
+
+
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      String myString = scnr.nextLine();
+      //System.err.println(myString);
+      String Done = "Done";
+      String done = "done";
+      String d = "d";
+      while (!myString.equals("d") && !myString.equals("done") && !myString.equals("Done")) {
+         
+         for (int i = (myString.length() - 1); i >= 0; --i ) {
+            System.out.print(myString.charAt(i));
+         }
+         System.out.println();
+         myString = scnr.nextLine();
+      }
+   }
+}
+
+
+
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      String myLetter = scnr.next();
+      String myString = scnr.nextLine();
+      int charCount = 0;
+      //System.err.print(myLetter);
+      //System.err.println();
+      //System.err.print(myString);
+      int i;
+      for (i = 0; i < myString.length(); ++i) {
+         //System.err.print(myString.charAt(i));
+         if (myLetter.charAt(0) == myString.charAt(i)) {
+            ++charCount;
+         }
+         
+      }
+      
+      if (charCount == 1) {
+         System.out.print(charCount + " " + myLetter);
+      } else {
+         System.out.print(charCount + " " + myLetter + "'s");
+      }
+      
+      
+   }
+}
